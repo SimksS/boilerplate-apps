@@ -1,3 +1,4 @@
+import Providers from '@/app/providers'
 import StyledComponentsRegistry from '@/lib/registry'
 import type { Metadata } from 'next'
 
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <Providers>{children}</Providers>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
